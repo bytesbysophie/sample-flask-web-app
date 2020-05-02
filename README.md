@@ -4,6 +4,8 @@ This project contains a simple Flask Web Application Setup following https://fla
 
 Further more, the usage of templates is introduced. Furhter details: https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/
 
+### Note
+On production, SECRET_KEY='dev' needs to be changed.
 
 ### Running the application
 
