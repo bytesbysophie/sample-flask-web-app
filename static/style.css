@@ -1,0 +1,12 @@
+
+:root {
+    --font: "Nunito";
+    --color: gainsboro;
+    --color-bg: #111111;
+  }
+
+body {
+    background: var(--color-bg);
+    color: var(--color);
+    font-family: var(--font);
+}

@@ -1,13 +1,11 @@
-import os
-
-from flask import Flask
-
+from datetime import datetime
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY='dev', # TODO: OVERWRITE WITH RANDOM VALUE WHEN DEPLOYING
+        SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'sample-flask-web-app.sqlite'),
     )
 
@@ -24,9 +22,19 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/hello')
+    # a simple landing page
+    @app.route('/')
     def hello():
         return 'Hello, You!'
+
+    # landing page build with a html template
+    @app.route('/template')
+    def template():
+        return render_template('template-test.html')
+
+    # landing page build with a html template using a parameter
+    @app.route('/template-param')
+    def template_param():
+        return render_template('template-param-test.html', current_timestamp=datetime.now())
 
     return app
