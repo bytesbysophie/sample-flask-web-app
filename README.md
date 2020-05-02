@@ -17,7 +17,7 @@ $ flask run
 
 **For Windows cmd, use set instead of export:**
 
-> set FLASK_APP=flaskr
+'> set FLASK_APP=flaskr
 
 > set FLASK_ENV=development
 
