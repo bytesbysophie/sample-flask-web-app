@@ -16,11 +16,17 @@ $ export FLASK_ENV=development
 $ flask run
 
 **For Windows cmd, use set instead of export:**
+
 > set FLASK_APP=flaskr
+
 > set FLASK_ENV=development
+
 > flask run
 
 **For Windows PowerShell:**
+
 > $env:FLASK_APP = "flaskr"
+
 > $env:FLASK_ENV = "development"
+
 > flask run
