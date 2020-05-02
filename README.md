@@ -8,8 +8,11 @@ Further more, the usage of templates is introduced. Furhter details: https://fla
 ### Running the application
 
 **For Linux and Mac:**
+
 $ export FLASK_APP=flaskr
+
 $ export FLASK_ENV=development
+
 $ flask run
 
 **For Windows cmd, use set instead of export:**
